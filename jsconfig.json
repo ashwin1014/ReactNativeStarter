@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "es2017",
+      "allowSyntheticDefaultImports": false,
+      "experimentalDecorators": true,
+      "jsx": "react",
+      "baseUrl": "./",
+      "paths": {
+        "@assets/*": ["src/assets/*"],
+        "@config/*": ["src/config/*"],
+        "@constants/*": ["src/constants/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@sharedComponents/*": ["src/sharedComponents/*"],
+        "@commonActions/*": ["src/app/commonActions/*"],
+        "@screens/*": ["src/app/screens/*"],
+        "@utils/*": ["src/utils/*"],
+        "@styles": ["./src/styles"],
+        "*": ["./src*"]
+      }
+    }
+  }

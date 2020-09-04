@@ -1,0 +1,41 @@
+{
+    "presets": ["module:metro-react-native-babel-preset"],
+    "plugins": [
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-proposal-object-rest-spread",
+        ["module-resolver", {
+            "extensions": [
+              ".js"
+            ],
+            "alias": {
+              "@assets": "./src/assets",
+              "@config": "./src/config",
+              "@constants": "./src/constants",
+              "@hooks": "./src/hooks",
+              "@sharedComponents": "./src/sharedComponents",
+              "@commonActions": "./src/app/commonActions",
+              "@screens":"./src/app/screens",
+              "@utils": "./src/utils",
+              "@styles": "./src/styles"
+            }
+          }]
+    ],
+    "env": {
+        "production": {
+          "plugins": [
+            [
+              "transform-remove-console",
+              {
+                "exclude": [
+                  "error",
+                  "warn",
+                  "info"
+                ]
+              }
+            ],
+            "transform-remove-debugger",
+            "transform-react-remove-prop-types"
+          ]
+        }
+      }
+}

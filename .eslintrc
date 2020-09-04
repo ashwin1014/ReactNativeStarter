@@ -1,0 +1,86 @@
+{
+    "root": true,
+    "extends": ["plugin:import/errors", "plugin:import/warnings", "eslint:recommended",  "plugin:react/recommended"],
+    "plugins": ["react-native", "react", "module-resolver", "react-hooks", "import"],
+    "rules": {
+        "prefer-destructuring": 1,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/no-unused-state": 1,
+        "react/destructuring-assignment": 1,
+        "react/no-array-index-key": 1,
+        "react/jsx-key": [2],
+        "react/jsx-no-duplicate-props": [2],
+        "react/jsx-uses-vars": [2],
+        "react/jsx-uses-react": [2],
+        "react/jsx-no-undef": ["error", { "allowGlobals": true}],
+        "react/no-direct-mutation-state": [2],
+        "react/require-optimization": [1],
+        "react/require-render-return": [2],
+        "react/no-did-update-set-state": 0,
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 0,
+        "react-native/no-color-literals": 0,
+        "react-native/no-single-element-style-arrays": 2,
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "no-unused-expressions": ["error", {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": true
+        }],
+        "import/imports-first": ["error", "absolute-first"],
+        "import/no-unresolved": 0,
+        "import/newline-after-import": "error",
+        "module-resolver/use-alias": 2
+    },
+    "settings": {
+        "react": {
+          "version": "16.13.1"
+        },
+        "import/resolver": {
+          "babel-module": {
+            "root": ["./src"],
+            "alias": {
+              "@assets": "./src/assets",
+              "@config": "./src/config",
+              "@constants": "./src/constants",
+              "@hooks": "./src/hooks",
+              "@sharedComponents": "./src/sharedComponents",
+              "@commonActions": "./src/app/commonActions",
+              "@screens":"./src/app/screens",
+              "@utils": "./src/utils",
+              "@styles": "./src/styles"
+            }
+          },
+          "node": {
+            "extensions": [
+              ".js",
+              ".jsx"
+            ]
+          }
+        },
+        "import/extensions": [
+          ".js",
+          ".jsx"
+        ]
+      },
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "env": {
+        "react-native/react-native": true
+      },
+      "globals": {
+        "fetch": false,
+        "btoa": false,
+        "Headers": false,
+        "window": false,
+        "navigator": false,
+        "requestAnimationFrame": true,
+        "cancelAnimationFrame": true
+      }
+}
